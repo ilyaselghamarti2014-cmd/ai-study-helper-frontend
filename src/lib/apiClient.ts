@@ -236,9 +236,142 @@ class ApiClient {
     return this.post<ApiResponse<any>>('/inference/predict', { features }, true);
   }
 
+  // Study Sessions
+  async getStudySessions() {
+    return this.get<ApiResponse<any[]>>('/study-sessions');
+  }
+
+  async createStudySession(data: any) {
+    return this.post<ApiResponse<any>>('/study-sessions', data);
+  }
+
+  async updateStudySession(id: number, data: any) {
+    return this.put<ApiResponse<any>>(`/study-sessions/${id}`, data);
+  }
+
+  // Analytics
+  async getAnalytics(timeRange: string) {
+    return this.get<ApiResponse<any>>(`/analytics?timeRange=${timeRange}`);
+  }
+
+  // Gamification
+  async getUserGamificationStats() {
+    return this.get<ApiResponse<any>>('/gamification/stats');
+  }
+
+  async completeAchievement(achievementId: number) {
+    return this.post<ApiResponse<any>>(`/gamification/achievements/${achievementId}/complete`, {});
+  }
+
+  // Onboarding
+  async getUserOnboarding() {
+    return this.get<ApiResponse<any>>('/onboarding');
+  }
+
+  async updateOnboarding(data: any) {
+    return this.put<ApiResponse<any>>('/onboarding', data);
+  }
+
+  async completeOnboarding(preferences: any) {
+    return this.post<ApiResponse<any>>('/onboarding/complete', { preferences });
+  }
+
+  async skipOnboarding() {
+    return this.post<ApiResponse<any>>('/onboarding/skip', {});
+  }
+
   // AI Image Analysis
   async analyzeImage(file: File) {
     return this.upload<ApiResponse<any>>('/inference/analyze-image', file);
+  }
+
+  // Quiz System
+  async getQuizzes() {
+    return this.get<ApiResponse<any[]>>('/quizzes');
+  }
+
+  async generateAIQuiz(topic: string, difficulty: string, questionCount: number = 10) {
+    return this.post<ApiResponse<any>>(`/quizzes/generate?topic=${topic}&difficulty=${difficulty}&questionCount=${questionCount}`, {}, true);
+  }
+
+  async submitQuizAttempt(quizId: number, answers: string) {
+    return this.post<ApiResponse<any>>(`/quizzes/${quizId}/submit`, { answers });
+  }
+
+  async getQuizAttempts(quizId: number) {
+    return this.get<ApiResponse<any[]>>(`/quizzes/${quizId}/attempts`);
+  }
+
+  // Flashcards
+  async getFlashcards() {
+    return this.get<ApiResponse<any[]>>('/flashcards');
+  }
+
+  async createFlashcard(data: any) {
+    return this.post<ApiResponse<any>>('/flashcards', data);
+  }
+
+  async generateAIFlashcards(content: string, count: number = 10) {
+    return this.post<ApiResponse<any>>(`/flashcards/generate?content=${content}&count=${count}`, {}, true);
+  }
+
+  async getDueFlashcards() {
+    return this.get<ApiResponse<any[]>>('/flashcards/due');
+  }
+
+  async reviewFlashcard(id: number, correct: boolean) {
+    return this.post<ApiResponse<any>>(`/flashcards/${id}/review?correct=${correct}`, {});
+  }
+
+  // Exam Preparation
+  async getExamPreps() {
+    return this.get<ApiResponse<any[]>>('/exam-prep');
+  }
+
+  async createExamPrep(data: any) {
+    return this.post<ApiResponse<any>>('/exam-prep', data);
+  }
+
+  async generateAIExamPlan(examName: string, subject: string, examDate: string, targetScore: number) {
+    return this.post<ApiResponse<any>>(`/exam-prep/generate?examName=${examName}&subject=${subject}&examDate=${examDate}&targetScore=${targetScore}`, {}, true);
+  }
+
+  async getExamTopics(examPrepId: number) {
+    return this.get<ApiResponse<any[]>>(`/exam-prep/${examPrepId}/topics`);
+  }
+
+  async completeExamTopic(topicId: number) {
+    return this.post<ApiResponse<any>>(`/exam-prep/topics/${topicId}/complete`, {});
+  }
+
+  // Learning Paths
+  async getLearningPaths() {
+    return this.get<ApiResponse<any[]>>('/learning-paths');
+  }
+
+  async createLearningPath(data: any) {
+    return this.post<ApiResponse<any>>('/learning-paths', data);
+  }
+
+  async generateAILearningPath(subject: string, level: string) {
+    return this.post<ApiResponse<any>>(`/learning-paths/generate?subject=${subject}&level=${level}`, {}, true);
+  }
+
+  async getPathModules(pathId: number) {
+    return this.get<ApiResponse<any[]>>(`/learning-paths/${pathId}/modules`);
+  }
+
+  async completePathModule(moduleId: number) {
+    return this.post<ApiResponse<any>>(`/learning-paths/modules/${moduleId}/complete`, {});
+  }
+
+  // Semantic Search
+  async search(query: string) {
+    return this.get<ApiResponse<any[]>>(`/search?query=${query}`);
+  }
+
+  async indexContent(entityType: string, entityId: number, title: string, content: string, tags?: string) {
+    return this.post<ApiResponse<any>>(`/search/index?entityType=${entityType}&entityId=${entityId}&title=${title}&content=${content}${tags ? `&tags=${tags}` : ''}`, {});
   }
 }
 

@@ -4,6 +4,7 @@ import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { authApi } from '@/lib/auth';
+import AdBanner from '@/components/AdBanner';
 
 function ResetPasswordForm() {
   const router = useRouter();
@@ -58,6 +59,7 @@ function ResetPasswordForm() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 px-4">
         <div className="max-w-md w-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
+          <AdBanner className="mb-6" />
           <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 px-4 py-3 rounded-lg">
             Invalid reset token. Please request a new password reset.
           </div>
@@ -74,6 +76,7 @@ function ResetPasswordForm() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 px-4">
       <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
+        <AdBanner className="mb-6" />
         <div>
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white">
             Set New Password
