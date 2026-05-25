@@ -1,7 +1,7 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api';
-const AI_URL = process.env.NEXT_PUBLIC_AI_URL || 'http://localhost:8000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://105.190.134.41:8080/api';
+const AI_URL = process.env.NEXT_PUBLIC_AI_URL || 'http://105.190.134.41:8000';
 
-interface ApiResponse<T> {
+export interface ApiResponse<T> {
   success: boolean;
   data: T;
   message?: string;
