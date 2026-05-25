@@ -17,9 +17,17 @@ interface AdBannerProps {
 export default function AdBanner({ className = '', adSlot = '', style }: AdBannerProps) {
   const [shouldShow, setShouldShow] = useState(false);
   const [adLoaded, setAdLoaded] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const adRef = useRef<HTMLDivElement>(null);
 
+  // Only run on client-side to prevent hydration issues
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     // Subscribe to ad service events
     const unsubscribe = adService.subscribe((show: boolean) => {
       setShouldShow(show);
@@ -31,21 +39,21 @@ export default function AdBanner({ className = '', adSlot = '', style }: AdBanne
     }
 
     return unsubscribe;
-  }, []);
+  }, [isClient]);
 
   useEffect(() => {
-    if (shouldShow && adRef.current && !adLoaded) {
-      // Load AdSense ad when banner should show
-      loadAd();
-    }
-  }, [shouldShow, adLoaded]);
+    if (!isClient || !shouldShow || !adRef.current || adLoaded) return;
+
+    // Load AdSense ad when banner should show
+    loadAd();
+  }, [shouldShow, adLoaded, isClient]);
 
   const loadAd = () => {
     try {
       // Push ad to AdSense queue
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
       (window as any).adsbygoogle.push({
-        google_ad_client: 'ca-pub-7457347570950747',
+        google_ad_client: process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-7457347570950747',
         enable_page_level_ads: true,
       });
 
@@ -60,6 +68,8 @@ export default function AdBanner({ className = '', adSlot = '', style }: AdBanne
     adService.markAdShown();
   };
 
+  // Don't render during SSR
+  if (!isClient) return null;
   if (!shouldShow) return null;
 
   return (
@@ -106,7 +116,7 @@ export default function AdBanner({ className = '', adSlot = '', style }: AdBanne
       <ins
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', minHeight: '100px' }}
-        data-ad-client="ca-pub-7457347570950747"
+        data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-7457347570950747'}
         data-ad-slot={adSlot}
         data-ad-format="auto"
         data-full-width-responsive="true"
@@ -128,8 +138,15 @@ export default function AdBanner({ className = '', adSlot = '', style }: AdBanne
  */
 export function InlineAd({ className = '', adSlot = '' }: { className?: string; adSlot?: string }) {
   const [shouldShow, setShouldShow] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     const unsubscribe = adService.subscribe((show: boolean) => {
       setShouldShow(show);
     });
@@ -139,13 +156,14 @@ export function InlineAd({ className = '', adSlot = '' }: { className?: string; 
     }
 
     return unsubscribe;
-  }, []);
+  }, [isClient]);
 
   const handleAdClose = () => {
     setShouldShow(false);
     adService.markAdShown();
   };
 
+  if (!isClient) return null;
   if (!shouldShow) return null;
 
   return (
@@ -172,7 +190,7 @@ export function InlineAd({ className = '', adSlot = '' }: { className?: string; 
       <ins
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', minHeight: '60px' }}
-        data-ad-client="ca-pub-7457347570950747"
+        data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-7457347570950747'}
         data-ad-slot={adSlot}
         data-ad-format="fluid"
         data-ad-layout="in-article"
