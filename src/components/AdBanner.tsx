@@ -18,7 +18,7 @@ export default function AdBanner({ className = '', adSlot = '', style }: AdBanne
   const [shouldShow, setShouldShow] = useState(false);
   const [adLoaded, setAdLoaded] = useState(false);
   const [isClient, setIsClient] = useState(false);
-  const adRef = useRef<HTMLDivElement>(null);
+  const adRef = useRef<HTMLModElement>(null);
 
   // Only run on client-side to prevent hydration issues
   useEffect(() => {
@@ -45,19 +45,25 @@ export default function AdBanner({ className = '', adSlot = '', style }: AdBanne
     if (!isClient || !shouldShow || !adRef.current || adLoaded) return;
 
     // Load AdSense ad when banner should show
-    loadAd();
+    // Use setTimeout to ensure DOM is ready
+    const timer = setTimeout(() => {
+      loadAd();
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, [shouldShow, adLoaded, isClient]);
 
   const loadAd = () => {
     try {
-      // Push ad to AdSense queue
+      // Ensure adsbygoogle is initialized
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
-      (window as any).adsbygoogle.push({
-        google_ad_client: process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-7457347570950747',
-        enable_page_level_ads: true,
-      });
-
-      setAdLoaded(true);
+      
+      // Only push if this specific ad hasn't been loaded yet
+      if (adRef.current && !adRef.current.getAttribute('data-ad-status')) {
+        (window as any).adsbygoogle.push({});
+        adRef.current.setAttribute('data-ad-status', 'loaded');
+        setAdLoaded(true);
+      }
     } catch (error) {
       console.error('Failed to load ad:', error);
     }
@@ -74,7 +80,6 @@ export default function AdBanner({ className = '', adSlot = '', style }: AdBanne
 
   return (
     <div 
-      ref={adRef}
       className={`ad-banner ${className}`}
       style={{
         width: '100%',
@@ -114,6 +119,7 @@ export default function AdBanner({ className = '', adSlot = '', style }: AdBanne
 
       {/* AdSense Ad Unit */}
       <ins
+        ref={adRef}
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', minHeight: '100px' }}
         data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-7457347570950747'}

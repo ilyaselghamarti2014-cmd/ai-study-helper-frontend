@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Sidebar from './Sidebar';
 import TopNavbar from './TopNavbar';
 import ProtectedRoute from './ProtectedRoute';
-import AdBanner from './AdBanner';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -20,7 +19,6 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         <TopNavbar onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
         
         <main className="lg:ml-72 pt-16 p-4 lg:p-8">
-          <AdBanner className="mb-4" />
           {children}
         </main>
       </div>

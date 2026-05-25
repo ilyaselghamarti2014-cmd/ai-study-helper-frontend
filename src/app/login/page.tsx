@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
-import AdBanner from '@/components/AdBanner';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -41,7 +40,6 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 px-4">
       <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
-        <AdBanner className="mb-6" />
         <div>
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white">
             Welcome Back
