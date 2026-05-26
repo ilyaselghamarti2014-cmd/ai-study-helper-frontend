@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
+import Link from 'next/link';
 
 /**
  * FooterAd Component
@@ -50,6 +51,14 @@ export default function FooterAd() {
           data-ad-format="auto"
           data-full-width-responsive="true"
         />
+        <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
+          <Link 
+            href="/privacy-policy" 
+            className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            Privacy Policy
+          </Link>
+        </div>
       </div>
     </div>
   );
