@@ -14,12 +14,12 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
   return (
     <ProtectedRoute>
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 overflow-x-hidden">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 overflow-x-hidden w-full max-w-full" style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
         <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
         <TopNavbar onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
         
-        <main className="lg:ml-72 pt-16 p-4 lg:p-8 w-full min-w-0">
-          <div className="max-w-full">
+        <main className="lg:ml-72 pt-16 p-4 lg:p-8 w-full min-w-0 max-w-full" style={{ width: '100%', maxWidth: '100%', overflowX: 'hidden' }}>
+          <div className="w-full max-w-full" style={{ width: '100%', maxWidth: '100%', overflowX: 'hidden' }}>
             {children}
           </div>
         </main>

@@ -19,37 +19,40 @@
   }
 }
 
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-  max-width: 100vw;
-  width: 100%;
-  min-width: 0;
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-html {
-  overflow-x: hidden;
-  max-width: 100vw;
-  width: 100%;
+#root, #__next {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   * {
     -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
   }
   
-  body {
-    font-size: 16px;
-  }
-  
-  /* Prevent horizontal scroll */
   html, body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100vw;
+    font-size: 16px;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
   }
   
   /* Touch-friendly spacing */

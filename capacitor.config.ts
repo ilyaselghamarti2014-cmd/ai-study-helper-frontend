@@ -16,6 +16,7 @@ const config: CapacitorConfig = {
       keystoreAliasPassword: process.env.ANDROID_KEYSTORE_ALIAS_PASSWORD,
       keystorePassword: process.env.ANDROID_KEYSTORE_PASSWORD,
     },
+    webContentsDebuggingEnabled: true,
   },
   plugins: {
     SplashScreen: {
