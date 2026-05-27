@@ -39,7 +39,7 @@ export default function SettingsPage() {
   if (!mounted) {
     return (
       <DashboardLayout>
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="w-full max-w-4xl mx-auto space-y-8 px-4 sm:px-0">
           <div className="animate-pulse">
             <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-48 mb-2"></div>
             <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-96"></div>
@@ -51,7 +51,7 @@ export default function SettingsPage() {
 
   return (
     <DashboardLayout>
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="w-full max-w-4xl mx-auto space-y-8 px-4 sm:px-0">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

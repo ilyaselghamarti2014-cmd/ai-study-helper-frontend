@@ -107,7 +107,7 @@ const quickActions = [
 export default function DashboardPage() {
   return (
     <DashboardLayout>
-      <div className="space-y-8">
+      <div className="w-full space-y-8 px-4 sm:px-0">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

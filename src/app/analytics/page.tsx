@@ -71,9 +71,11 @@ export default function AnalyticsPage() {
   if (!mounted) {
     return (
       <DashboardLayout>
-        <div className="animate-pulse">
-          <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-48 mb-4"></div>
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-96"></div>
+        <div className="w-full max-w-7xl mx-auto space-y-8 px-4 sm:px-0">
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-48 mb-4"></div>
+            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-96"></div>
+          </div>
         </div>
       </DashboardLayout>
     );
@@ -81,12 +83,12 @@ export default function AnalyticsPage() {
 
   return (
     <DashboardLayout>
-      <div className="max-w-7xl mx-auto space-y-8">
+      <div className="w-full max-w-7xl mx-auto space-y-8 px-4 sm:px-0">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex justify-between items-center"
+          className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
         >
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
@@ -96,7 +98,7 @@ export default function AnalyticsPage() {
               Track your learning progress with AI-powered insights
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <Button
               variant={timeRange === 7 ? 'default' : 'outline'}
               onClick={() => setTimeRange(7)}
