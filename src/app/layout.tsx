@@ -7,7 +7,6 @@ import { NotificationProvider } from "@/contexts/NotificationContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
-import FooterAd from "@/components/FooterAd";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,7 +79,6 @@ export default function RootLayout({
             </NotificationProvider>
           </LanguageProvider>
         </ThemeProvider>
-        <FooterAd />
         <Analytics />
       </body>
     </html>
