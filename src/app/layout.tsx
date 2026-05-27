@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ai-study-helper-frontend-zeta.vercel.app'),
   title: "QuickLearn - AI Study Helper",
   description: "AI-powered learning platform for students - Study smarter with AI",
   verification: {

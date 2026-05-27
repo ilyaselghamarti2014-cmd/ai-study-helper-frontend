@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:static": "next build && next export",
-    "build:capacitor": "next build && next export && npx cap sync",
+    "build:static": "set NEXT_PUBLIC_STATIC_EXPORT=true && next build",
+    "build:capacitor": "set NEXT_PUBLIC_STATIC_EXPORT=true && next build && npx cap sync",
     "start": "next start",
     "lint": "eslint",
     "android": "npm run build:capacitor && npx cap open android",
