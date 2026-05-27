@@ -20,15 +20,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Study Helper",
-  description: "AI-powered learning platform for students",
+  title: "QuickLearn - AI Study Helper",
+  description: "AI-powered learning platform for students - Study smarter with AI",
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
   openGraph: {
-    title: "AI Study Helper",
-    description: "AI-powered learning platform for students",
+    title: "QuickLearn - AI Study Helper",
+    description: "AI-powered learning platform for students - Study smarter with AI",
     type: "website",
+    images: ["/logo.png"],
+  },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
   robots: {
     index: true,
