@@ -42,7 +42,7 @@ export interface RefreshTokenRequest {
   refreshToken: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://105.190.237.20/api';
 
 export const authApi = {
   async login(credentials: LoginCredentials): Promise<AuthResponse> {

@@ -11,8 +11,8 @@ class ApiClient {
   private tokenRefreshPromise: Promise<string> | null = null;
 
   constructor() {
-    this.baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://105.190.134.41:8080/api';
-    this.aiURL = process.env.NEXT_PUBLIC_AI_URL || 'http://105.190.134.41:8000';
+    this.baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://105.190.237.20/api';
+    this.aiURL = process.env.NEXT_PUBLIC_AI_URL || 'http://105.190.237.20';
   }
 
   private async getAccessToken(): Promise<string | null> {

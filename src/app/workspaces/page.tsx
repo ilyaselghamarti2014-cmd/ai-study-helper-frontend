@@ -109,12 +109,12 @@ export default function WorkspacesPage() {
 
   return (
     <DashboardLayout>
-      <div className="max-w-7xl mx-auto space-y-8">
+      <div className="w-full space-y-8 px-4 sm:px-0">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
+          className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
         >
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">

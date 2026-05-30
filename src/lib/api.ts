@@ -1,5 +1,5 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://105.190.134.41:8080/api';
-const AI_URL = process.env.NEXT_PUBLIC_AI_URL || 'http://105.190.134.41:8000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://105.190.237.20/api';
+const AI_URL = process.env.NEXT_PUBLIC_AI_URL || 'http://105.190.237.20';
 
 export interface ApiResponse<T> {
   success: boolean;
