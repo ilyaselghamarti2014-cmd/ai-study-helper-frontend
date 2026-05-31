@@ -73,6 +73,42 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "AI Study Helper",
+              "url": "https://ai-study-helper-frontend-zeta.vercel.app",
+              "logo": "https://ai-study-helper-frontend-zeta.vercel.app/logo.png",
+              "description": "AI-powered learning platform for students - Study smarter with AI",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "support@aistudyhelper.com",
+                "contactType": "customer service"
+              },
+              "sameAs": []
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "AI Study Helper",
+              "url": "https://ai-study-helper-frontend-zeta.vercel.app",
+              "description": "AI-powered learning platform for students - Study smarter with AI",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://ai-study-helper-frontend-zeta.vercel.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
