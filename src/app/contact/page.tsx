@@ -31,7 +31,7 @@ export default function ContactPage() {
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center">
               <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Email Us</h3>
-              <p className="text-gray-700 dark:text-gray-300">
+              <p className="text-gray-700 dark:text-gray-300 break-all text-sm">
                 quicklearn.ai.study.helper@gmail.com
               </p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
