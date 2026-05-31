@@ -32,7 +32,7 @@ export default function ContactPage() {
               <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Email Us</h3>
               <p className="text-gray-700 dark:text-gray-300">
-                support@aistudyhelper.com
+                quicklearn.ai.study.helper@gmail.com
               </p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
                 We respond within 24 hours
@@ -42,10 +42,10 @@ export default function ContactPage() {
               <MessageSquare className="w-12 h-12 text-purple-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Live Chat</h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Available in the app
+                Available on Instagram
               </p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                Mon-Fri, 9am-6pm UTC
+                Follow / Message us on Instagram: @quicklearn_ai.study_helper
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center">
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 Global Remote Team
               </p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                Serving students worldwide
+                Morocco, but we serve students worldwide!
               </p>
             </div>
           </div>
