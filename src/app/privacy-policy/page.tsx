@@ -144,7 +144,7 @@ export default function PrivacyPolicyPage() {
               If you have any questions about this Privacy Policy or our data practices, please contact us at:
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              <strong>Email:</strong> support@aistudyhelper.com<br />
+              <strong>Email:</strong> quicklearn.ai.study.helper@gmail.com<br />
               <strong>Website:</strong> <a href="/contact" className="text-blue-600 dark:text-blue-400 hover:underline">Contact Us</a>
             </p>
           </div>
