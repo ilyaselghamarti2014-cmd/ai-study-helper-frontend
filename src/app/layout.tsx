@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "QuickLearn - AI Study Helper",
   description: "AI-powered learning platform for students - Study smarter with AI",
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '0Wj0VOauE1N7gTjWHSovXM1miw21bHkVcxJfzEyOHbw',
   },
   openGraph: {
     title: "QuickLearn - AI Study Helper",
@@ -64,7 +64,6 @@ export default function RootLayout({
     >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || ''} />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
