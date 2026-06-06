@@ -3,6 +3,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'FAQ - AI Study Helper',
   description: 'Frequently Asked Questions about AI Study Helper. Find answers to common questions about our AI-powered learning platform.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/faq',
+  },
   openGraph: {
     title: 'FAQ - AI Study Helper',
     description: 'Find answers to common questions about our AI-powered learning platform.',

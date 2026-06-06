@@ -4,6 +4,9 @@ import { Mail, MessageSquare, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact Us - AI Study Helper',
   description: 'Get in touch with AI Study Helper. Contact our support team for questions, feedback, or assistance with your learning journey.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/contact',
+  },
   openGraph: {
     title: 'Contact Us - AI Study Helper',
     description: 'Get in touch with AI Study Helper. Contact our support team for questions, feedback, or assistance.',

@@ -5,6 +5,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'How AI is Revolutionizing Study Habits in 2024 - AI Study Helper',
   description: 'Discover how artificial intelligence is transforming the way students learn, study, and retain information in the modern educational landscape.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/blog/how-ai-is-revolutionizing-study-habits',
+  },
   openGraph: {
     title: 'How AI is Revolutionizing Study Habits in 2024',
     description: 'Discover how artificial intelligence is transforming the way students learn.',

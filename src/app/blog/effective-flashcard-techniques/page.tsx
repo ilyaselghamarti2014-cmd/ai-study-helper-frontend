@@ -5,6 +5,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: '10 Effective Flashcard Techniques for Better Retention - AI Study Helper',
   description: 'Learn proven strategies to maximize your flashcard study sessions and improve long-term memory retention using spaced repetition.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/blog/effective-flashcard-techniques',
+  },
   openGraph: {
     title: '10 Effective Flashcard Techniques for Better Retention',
     description: 'Learn proven strategies to maximize your flashcard study sessions.',

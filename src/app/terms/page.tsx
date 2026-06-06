@@ -3,6 +3,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service - AI Study Helper',
   description: 'AI Study Helper Terms of Service - Read our terms and conditions for using our AI-powered learning platform.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/terms',
+  },
   openGraph: {
     title: 'Terms of Service - AI Study Helper',
     description: 'Read our terms and conditions for using our AI-powered learning platform.',

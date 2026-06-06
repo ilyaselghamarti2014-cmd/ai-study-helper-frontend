@@ -17,6 +17,9 @@ import {
 export const metadata: Metadata = {
   title: 'Features - AI Study Helper',
   description: 'Discover all the powerful features of AI Study Helper - AI-powered learning tools including document summarization, quiz generation, flashcards, and more.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/features',
+  },
   openGraph: {
     title: 'Features - AI Study Helper',
     description: 'Discover all the powerful features of AI Study Helper.',

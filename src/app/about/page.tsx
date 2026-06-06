@@ -4,6 +4,9 @@ import { Brain, Target, Users, Award } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'About Us - AI Study Helper',
   description: 'Learn about AI Study Helper - your AI-powered learning companion. Discover our mission, team, and commitment to transforming education through artificial intelligence.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/about',
+  },
   openGraph: {
     title: 'About Us - AI Study Helper',
     description: 'Learn about AI Study Helper - your AI-powered learning companion.',

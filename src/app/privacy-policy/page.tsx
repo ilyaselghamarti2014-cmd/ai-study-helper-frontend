@@ -3,6 +3,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy - AI Study Helper',
   description: 'AI Study Helper Privacy Policy - Learn how we collect, use, and protect your personal information. Your privacy is our priority.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/privacy-policy',
+  },
   openGraph: {
     title: 'Privacy Policy - AI Study Helper',
     description: 'Learn how we collect, use, and protect your personal information.',

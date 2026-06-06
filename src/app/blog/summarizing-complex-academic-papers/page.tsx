@@ -5,6 +5,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'How to Summarize Complex Academic Papers Efficiently - AI Study Helper',
   description: 'Master the art of summarizing lengthy research papers and academic documents with AI-powered tools and proven techniques.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/blog/summarizing-complex-academic-papers',
+  },
   openGraph: {
     title: 'How to Summarize Complex Academic Papers Efficiently',
     description: 'Master the art of summarizing lengthy research papers and academic documents.',

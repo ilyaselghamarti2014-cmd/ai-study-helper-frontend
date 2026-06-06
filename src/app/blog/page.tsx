@@ -5,6 +5,9 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Blog - AI Study Helper',
   description: 'Read the latest articles about AI-powered learning, study tips, and educational technology from AI Study Helper.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/blog',
+  },
   openGraph: {
     title: 'Blog - AI Study Helper',
     description: 'Read the latest articles about AI-powered learning and study tips.',
