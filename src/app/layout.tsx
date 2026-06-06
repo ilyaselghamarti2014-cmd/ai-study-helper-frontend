@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ai-study-helper-frontend-zeta.vercel.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-study-helper-frontend-zeta.vercel.app'),
   title: "QuickLearn - AI Study Helper",
   description: "AI-powered learning platform for students - Study smarter with AI",
   verification: {
@@ -54,6 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const adSenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-7457347570950747';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-study-helper-frontend-zeta.vercel.app';
   
   return (
     <html
@@ -80,8 +81,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "AI Study Helper",
-              "url": "https://ai-study-helper-frontend-zeta.vercel.app",
-              "logo": "https://ai-study-helper-frontend-zeta.vercel.app/logo.png",
+              "url": siteUrl,
+              "logo": `${siteUrl}/logo.png`,
               "description": "AI-powered learning platform for students - Study smarter with AI",
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -99,11 +100,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "AI Study Helper",
-              "url": "https://ai-study-helper-frontend-zeta.vercel.app",
+              "url": siteUrl,
               "description": "AI-powered learning platform for students - Study smarter with AI",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://ai-study-helper-frontend-zeta.vercel.app/search?q={search_term_string}",
+                "target": `${siteUrl}/search?q={search_term_string}`,
                 "query-input": "required name=search_term_string"
               }
             })
