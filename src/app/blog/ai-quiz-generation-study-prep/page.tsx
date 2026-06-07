@@ -5,6 +5,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Using AI Quiz Generation for Effective Exam Preparation - AI Study Helper',
   description: 'Learn how AI-generated quizzes can help you prepare for exams more effectively by identifying knowledge gaps and reinforcing learning.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/blog/ai-quiz-generation-study-prep',
+  },
   openGraph: {
     title: 'Using AI Quiz Generation for Effective Exam Preparation',
     description: 'Learn how AI-generated quizzes can help you prepare for exams more effectively.',

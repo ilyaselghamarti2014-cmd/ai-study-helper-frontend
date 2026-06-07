@@ -5,6 +5,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'The Power of Collaborative Learning in the Digital Age - AI Study Helper',
   description: 'Explore how digital tools and platforms are enabling students to collaborate more effectively and learn from each other.',
+  alternates: {
+    canonical: 'https://ai-study-helper-frontend-zeta.vercel.app/blog/collaborative-learning-digital-age',
+  },
   openGraph: {
     title: 'The Power of Collaborative Learning in the Digital Age',
     description: 'Explore how digital tools and platforms are enabling students to collaborate.',
