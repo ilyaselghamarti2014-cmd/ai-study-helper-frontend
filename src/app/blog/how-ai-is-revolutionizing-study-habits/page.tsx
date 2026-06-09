@@ -84,6 +84,21 @@ export default function BlogPost() {
             </p>
           </div>
         </article>
+
+        {/* Related Articles Section */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Related Articles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/effective-flashcard-techniques" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">10 Effective Flashcard Techniques for Better Retention</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Learn proven strategies to maximize your flashcard study sessions.</p>
+            </Link>
+            <Link href="/blog/ai-quiz-generation-study-prep" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Using AI Quiz Generation for Effective Exam Preparation</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Learn how AI-generated quizzes can help you prepare for exams more effectively.</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
