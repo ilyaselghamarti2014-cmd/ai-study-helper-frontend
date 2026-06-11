@@ -94,6 +94,21 @@ export default function BlogPost() {
             </p>
           </div>
         </article>
+
+        {/* Related Articles Section */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Related Articles</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/how-ai-is-revolutionizing-study-habits" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">How AI is Revolutionizing Study Habits in 2024</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Discover how artificial intelligence is transforming the way students learn.</p>
+            </Link>
+            <Link href="/blog/effective-flashcard-techniques" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">10 Effective Flashcard Techniques for Better Retention</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Learn proven strategies to maximize your flashcard study sessions.</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
