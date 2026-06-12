@@ -380,6 +380,217 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Study Methods Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Proven Study Methods Backed by Science
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Learn evidence-based techniques that help students retain information, understand complex concepts, and perform better on exams.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Active Recall</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Instead of passively re-reading notes, actively test yourself on the material. This technique forces your brain to retrieve information from memory, strengthening neural pathways and improving long-term retention.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Research shows that students who practice active recall score significantly higher on exams compared to those who use passive study methods like re-reading or highlighting.
+              </p>
+              <Link href="/blog/effective-flashcard-techniques" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                Learn how to implement active recall with flashcards →
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Spaced Repetition</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Review material at gradually increasing intervals. This technique leverages the spacing effect, which shows that information is better retained when learning sessions are spaced out over time rather than crammed together.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                AI Study Helper automatically implements spaced repetition in our flashcard system, scheduling reviews at optimal times to maximize memory retention while minimizing study time.
+              </p>
+              <Link href="/features" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                See how our AI implements spaced repetition →
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">The Pomodoro Technique</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Break your study sessions into focused 25-minute intervals separated by short 5-minute breaks. After four intervals, take a longer 15-30 minute break. This method helps maintain focus and prevents burnout.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Studies demonstrate that the Pomodoro Technique improves concentration, reduces mental fatigue, and helps students complete more work in less time by creating a sense of urgency and preventing procrastination.
+              </p>
+              <Link href="/blog" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                Read more productivity tips in our blog →
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700"
+            >
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Elaborative Interrogation</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Ask yourself "why" questions about the material you're learning. Instead of just memorizing facts, explain to yourself why those facts are true and how they connect to other concepts you already know.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                This technique promotes deeper understanding by forcing you to make connections between new information and existing knowledge. Our AI chat assistant can help you practice elaborative interrogation by asking probing questions about your study material.
+              </p>
+              <Link href="/features" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                Try our AI chat for elaborative learning →
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Productivity Tips Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Productivity Tips for Students
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Practical strategies to manage your time effectively, stay organized, and achieve your academic goals without burnout.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Create a Study Schedule',
+                description: 'Plan your study sessions in advance and block out specific times for each subject. Consistency is key to building effective study habits and avoiding last-minute cramming.',
+                icon: '📅'
+              },
+              {
+                title: 'Eliminate Distractions',
+                description: 'Study in a quiet environment, put your phone on silent, and use website blockers if necessary. Research shows that multitasking reduces productivity by up to 40%.',
+                icon: '🎯'
+              },
+              {
+                title: 'Set SMART Goals',
+                description: 'Make your study goals Specific, Measurable, Achievable, Relevant, and Time-bound. Clear goals provide direction and motivation, making it easier to track progress.',
+                icon: '🎯'
+              },
+              {
+                title: 'Take Regular Breaks',
+                description: 'Your brain needs rest to consolidate learning. Short breaks between study sessions improve focus and prevent mental fatigue. Use breaks to stretch, hydrate, or take a short walk.',
+                icon: '☕'
+              },
+              {
+                title: 'Use the Feynman Technique',
+                description: 'Teach concepts to others or explain them in simple terms. If you cannot explain it simply, you do not understand it well enough. This technique reveals knowledge gaps.',
+                icon: '📚'
+              },
+              {
+                title: 'Prioritize Difficult Tasks',
+                description: 'Tackle your most challenging subjects when your energy is highest, typically in the morning. This approach, called "eating the frog," prevents procrastination on difficult material.',
+                icon: '⚡'
+              }
+            ].map((tip, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-gray-50 dark:bg-gray-700/50 rounded-2xl p-6 border border-gray-200 dark:border-gray-700"
+              >
+                <div className="text-4xl mb-4">{tip.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{tip.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{tip.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Exam Preparation Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-purple-900/30">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+              Exam Preparation Strategies That Work
+            </h2>
+            <div className="prose prose-lg dark:prose-invert max-w-none">
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
+                Effective exam preparation starts long before the test date. Begin by reviewing your syllabus and identifying key topics. Create a study timeline that allocates more time to difficult subjects and less time to areas you've already mastered.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Practice with Past Papers</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
+                One of the most effective exam preparation strategies is practicing with past exam papers. This helps you familiarize yourself with the exam format, question types, and time constraints. AI Study Helper can generate practice quizzes based on your study materials that simulate real exam conditions.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Create Summary Notes</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
+                Condense your course material into concise summary notes. Focus on key concepts, formulas, definitions, and important examples. Our AI-powered PDF summarizer can help you extract the most important information from textbooks and lecture notes, saving you hours of manual summarization work.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Form Study Groups</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
+                Studying with peers can be highly effective. Explaining concepts to others reinforces your own understanding, and group members can help clarify confusing topics. AI Study Helper's collaboration features make it easy to share notes, quizzes, and study materials with classmates.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Get Adequate Sleep</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
+                Sleep is crucial for memory consolidation. Research shows that students who get adequate sleep perform better on exams than those who pull all-nighters. Aim for 7-9 hours of sleep, especially in the days leading up to important exams.
+              </p>
+              
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 mt-8 border border-gray-200 dark:border-gray-700">
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>Pro Tip:</strong> Use AI Study Helper's quiz generation feature to create practice tests from your study materials. Our AI can identify your weak areas and generate targeted questions to help you focus your study time where it's needed most.
+                </p>
+                <Link href="/blog/ai-quiz-generation-study-prep" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                  Learn more about AI-powered exam preparation →
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* SEO Content Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
         <div className="max-w-4xl mx-auto">

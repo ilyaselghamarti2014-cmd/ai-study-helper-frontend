@@ -142,7 +142,7 @@ export default function ContactPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">Have a Question?</h2>
           <p className="text-white/90 mb-6">
-            Check out our FAQ section for quick answers to common questions.
+            Check out our FAQ section for quick answers to common questions about AI Study Helper.
           </p>
           <a
             href="/faq"
@@ -150,6 +150,25 @@ export default function ContactPage() {
           >
             View FAQ
           </a>
+        </section>
+
+        {/* Additional Resources */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Additional Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/about" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">About Us</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Learn more about our mission, team, and values.</p>
+            </a>
+            <a href="/privacy-policy" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Privacy Policy</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Understand how we protect your data and privacy.</p>
+            </a>
+            <a href="/terms" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Terms of Service</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Read our terms and conditions for using the platform.</p>
+            </a>
+          </div>
         </section>
       </div>
     </div>

@@ -122,6 +122,25 @@ export default function FAQPage() {
               Contact Support
             </a>
           </div>
+
+          {/* Additional Resources */}
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Learn More</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href="/about" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">About Us</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Learn about our mission and team.</p>
+              </a>
+              <a href="/blog" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Blog</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Read educational articles and study tips.</p>
+              </a>
+              <a href="/features" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Features</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Explore all our AI-powered learning tools.</p>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
