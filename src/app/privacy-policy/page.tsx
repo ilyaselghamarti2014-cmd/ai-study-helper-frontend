@@ -153,6 +153,18 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </div>
+
+      {/* Additional Resources */}
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Related Pages</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/terms" className="text-blue-600 dark:text-blue-400 hover:underline">Terms of Service</a>
+            <a href="/about" className="text-blue-600 dark:text-blue-400 hover:underline">About Us</a>
+            <a href="/contact" className="text-blue-600 dark:text-blue-400 hover:underline">Contact Us</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

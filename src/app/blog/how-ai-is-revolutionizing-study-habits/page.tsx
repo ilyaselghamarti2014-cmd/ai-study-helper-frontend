@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: 'Discover how artificial intelligence is transforming the way students learn.',
     type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How AI is Revolutionizing Study Habits in 2024',
+    description: 'Discover how artificial intelligence is transforming the way students learn.',
+  },
 };
 
 export default function BlogPost() {

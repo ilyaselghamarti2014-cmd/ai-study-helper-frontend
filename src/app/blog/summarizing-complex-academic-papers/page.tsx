@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: 'Master the art of summarizing lengthy research papers and academic documents.',
     type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Summarize Complex Academic Papers Efficiently',
+    description: 'Master the art of summarizing lengthy research papers and academic documents.',
+  },
 };
 
 export default function BlogPost() {

@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     description: 'Get in touch with AI Study Helper. Contact our support team for questions, feedback, or assistance.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us - AI Study Helper',
+    description: 'Get in touch with AI Study Helper. Contact our support team for questions, feedback, or assistance.',
+  },
 };
 
 export default function ContactPage() {

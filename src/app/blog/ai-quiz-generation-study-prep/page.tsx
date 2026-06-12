@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: 'Learn how AI-generated quizzes can help you prepare for exams more effectively.',
     type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Using AI Quiz Generation for Effective Exam Preparation',
+    description: 'Learn how AI-generated quizzes can help you prepare for exams more effectively.',
+  },
 };
 
 export default function BlogPost() {

@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: 'Learn about AI Study Helper - your AI-powered learning companion.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us - AI Study Helper',
+    description: 'Learn about AI Study Helper - your AI-powered learning companion.',
+  },
 };
 
 export default function AboutUsPage() {

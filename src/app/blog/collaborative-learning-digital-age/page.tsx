@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: 'Explore how digital tools and platforms are enabling students to collaborate.',
     type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Power of Collaborative Learning in the Digital Age',
+    description: 'Explore how digital tools and platforms are enabling students to collaborate.',
+  },
 };
 
 export default function BlogPost() {

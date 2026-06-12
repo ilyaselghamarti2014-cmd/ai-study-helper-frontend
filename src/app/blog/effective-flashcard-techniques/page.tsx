@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: 'Learn proven strategies to maximize your flashcard study sessions.',
     type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: '10 Effective Flashcard Techniques for Better Retention',
+    description: 'Learn proven strategies to maximize your flashcard study sessions.',
+  },
 };
 
 export default function BlogPost() {

@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     description: 'Discover all the powerful features of AI Study Helper.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Features - AI Study Helper',
+    description: 'Discover all the powerful features of AI Study Helper.',
+  },
 };
 
 export default function FeaturesPage() {
