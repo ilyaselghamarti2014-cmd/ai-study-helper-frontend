@@ -321,6 +321,69 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Trust Signals / Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Trusted by Students Worldwide
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Join thousands of students who are already learning smarter with AI Study Helper.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                value: '10K+',
+                label: 'Active Students',
+                description: 'Students using our platform daily',
+              },
+              {
+                value: '95%',
+                label: 'Satisfaction Rate',
+                description: 'Students who report improved grades',
+              },
+              {
+                value: '50K+',
+                label: 'Quizzes Generated',
+                description: 'AI-generated practice quizzes',
+              },
+              {
+                value: '100K+',
+                label: 'Study Sessions',
+                description: 'Completed study sessions',
+              },
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                  {stat.value}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+                  {stat.label}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  {stat.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">

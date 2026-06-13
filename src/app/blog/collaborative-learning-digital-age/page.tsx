@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Calendar, Clock, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'The Power of Collaborative Learning in the Digital Age - AI Study Helper',
@@ -24,6 +25,12 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 px-4">
       <div className="max-w-4xl mx-auto">
+        <Breadcrumbs
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: 'The Power of Collaborative Learning in the Digital Age', href: '/blog/collaborative-learning-digital-age' },
+          ]}
+        />
         <Link
           href="/blog"
           className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline mb-8"
