@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: 'Read the latest articles about AI-powered learning and study tips.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog - AI Study Helper',
+    description: 'Read the latest articles about AI-powered learning and study tips.',
+  },
 };
 
 const blogPosts = [

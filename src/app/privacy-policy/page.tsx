@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     description: 'Learn how we collect, use, and protect your personal information.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy - AI Study Helper',
+    description: 'Learn how we collect, use, and protect your personal information.',
+  },
 };
 
 export default function PrivacyPolicyPage() {

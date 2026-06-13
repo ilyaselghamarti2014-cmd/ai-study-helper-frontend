@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     description: 'Read our terms and conditions for using our AI-powered learning platform.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms of Service - AI Study Helper',
+    description: 'Read our terms and conditions for using our AI-powered learning platform.',
+  },
 };
 
 export default function TermsOfServicePage() {

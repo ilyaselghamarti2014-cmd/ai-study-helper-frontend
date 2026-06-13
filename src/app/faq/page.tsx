@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     description: 'Find answers to common questions about our AI-powered learning platform.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FAQ - AI Study Helper',
+    description: 'Find answers to common questions about our AI-powered learning platform.',
+  },
 };
 
 export default function FAQPage() {
